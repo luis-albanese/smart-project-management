@@ -6,21 +6,21 @@ FROM base AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-# Install dependencies based on package manager
-COPY package.json package-lock.json* pnpm-lock.yaml* ./
+# Install pnpm globally
+RUN npm install -g pnpm
 
-# Install dependencies using npm (works with or without package-lock.json)
-RUN if [ -f package-lock.json ]; then \
-        echo "Using npm ci with package-lock.json"; \
-        npm ci --omit=dev && npm cache clean --force; \
-    else \
-        echo "Using npm install without package-lock.json"; \
-        npm install --production && npm cache clean --force; \
-    fi
+# Copy package files
+COPY package.json pnpm-lock.yaml* ./
+
+# Install dependencies with pnpm
+RUN pnpm install --frozen-lockfile --prod
 
 # Rebuild the source code only when needed
 FROM base AS builder
 WORKDIR /app
+
+# Install pnpm globally
+RUN npm install -g pnpm
 
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
@@ -28,8 +28,8 @@ COPY . .
 # Disable telemetry during the build
 ENV NEXT_TELEMETRY_DISABLED 1
 
-# Build the application (standalone se activa automáticamente en Linux)
-RUN npm run build
+# Build the application (build normal sin standalone)
+RUN pnpm run build
 
 # Production image, copy all the files and run next
 FROM base AS runner
@@ -38,6 +38,9 @@ WORKDIR /app
 ENV NODE_ENV production
 ENV NEXT_TELEMETRY_DISABLED 1
 
+# Install pnpm globally
+RUN npm install -g pnpm
+
 # Create a non-root user
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
@@ -45,27 +48,7 @@ RUN adduser --system --uid 1001 nextjs
 # Copy the public folder
 COPY --from=builder /app/public ./public
 
-# Set the correct permission for prerender cache
-RUN mkdir .next
-RUN chown nextjs:nodejs .next
-
-# En Linux: usar standalone si está disponible, sino usar build completo
-# Verificar si existe standalone build
-RUN if [ -d "/app/.next/standalone" ]; then \
-    echo "Using standalone build"; \
-    else \
-    echo "Using full build"; \
-    fi
-
-# Copy standalone build si existe (Linux), sino copy build completo
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone* ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
-
-# Si no hay standalone, copiar node_modules y .next completo
-RUN if [ ! -f "./server.js" ]; then \
-    echo "Copying full build for non-Linux platform"; \
-    fi
-
+# Copy the built application
 COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/package.json ./package.json
@@ -80,11 +63,5 @@ EXPOSE 3000
 ENV PORT 3000
 ENV HOSTNAME "0.0.0.0"
 
-# Ejecutar standalone si existe, sino usar npm start
-CMD if [ -f "./server.js" ]; then \
-      echo "Starting with standalone server"; \
-      node server.js; \
-    else \
-      echo "Starting with npm"; \
-      npm start; \
-    fi 
+# Start with npm start (build normal)
+CMD ["npm", "start"] 

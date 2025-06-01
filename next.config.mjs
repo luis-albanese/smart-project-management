@@ -9,8 +9,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // Standalone solo en Linux (evita problemas de symlinks en Windows)
-  output: process.platform === 'linux' ? 'standalone' : undefined,
+  // Deshabilitar standalone para evitar conflictos
+  // Usar build normal que funciona en todas las plataformas
+  output: undefined,
   // Configuración para mejorar compatibilidad con Windows
   outputFileTracingRoot: process.cwd(),
   // Configuración webpack para Windows
@@ -20,6 +21,9 @@ const nextConfig = {
       config.resolve.symlinks = false;
     }
     return config;
+  },
+  experimental: {
+    // Habilitar características experimentales si es necesario
   },
 }
 

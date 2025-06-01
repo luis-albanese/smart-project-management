@@ -14,35 +14,24 @@ if ! docker info > /dev/null 2>&1; then
     exit 1
 fi
 
-# Verificar y crear package-lock.json si no existe
-check_package_lock() {
-    if [ ! -f "package-lock.json" ] && [ -f "pnpm-lock.yaml" ]; then
-        echo "📦 Generando package-lock.json desde pnpm-lock.yaml..."
-        # Hacer backup del node_modules actual si existe
-        if [ -d "node_modules" ]; then
-            mv node_modules node_modules.bak
-        fi
-        # Instalar con npm para generar package-lock.json
-        npm install --package-lock-only
-        # Restaurar node_modules si había backup
-        if [ -d "node_modules.bak" ]; then
-            rm -rf node_modules
-            mv node_modules.bak node_modules
-        fi
-        echo "✅ package-lock.json generado"
-    elif [ -f "package-lock.json" ]; then
-        echo "✅ package-lock.json encontrado"
+# Verificar que pnpm esté instalado y el proyecto esté configurado
+check_pnpm_setup() {
+    if [ -f "pnpm-lock.yaml" ]; then
+        echo "✅ pnpm-lock.yaml encontrado"
     else
-        echo "⚠️  No se encontró pnpm-lock.yaml ni package-lock.json"
+        echo "⚠️  No se encontró pnpm-lock.yaml"
+        echo "💡 Ejecuta: pnpm install"
     fi
+    
+    echo "📦 Usando pnpm directamente en Docker (sin package-lock.json)"
 }
 
 # Función para deployment de desarrollo
 deploy_dev() {
     echo "📦 Deployment de Desarrollo (Puerto 6012)"
     
-    # Verificar package-lock.json
-    check_package_lock
+    # Verificar setup de pnpm
+    check_pnpm_setup
     
     # Parar contenedores existentes
     docker compose down 2>/dev/null || true
@@ -60,8 +49,8 @@ deploy_dev() {
 deploy_prod() {
     echo "🏭 Deployment de Producción (Puerto 6012, HTTPS 6013)"
     
-    # Verificar package-lock.json
-    check_package_lock
+    # Verificar setup de pnpm
+    check_pnpm_setup
     
     # Verificar JWT_SECRET
     if [ -z "$JWT_SECRET" ]; then

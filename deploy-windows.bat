@@ -14,13 +14,13 @@ if errorlevel 1 (
     exit /b 1
 )
 
-:: Verificar si existe package-lock.json, si no generarlo
-if not exist "package-lock.json" (
-    if exist "pnpm-lock.yaml" (
-        echo 📦 Generando package-lock.json desde pnpm-lock.yaml...
-        npm install --package-lock-only >nul 2>&1
-        echo ✅ package-lock.json generado
-    )
+:: Verificar pnpm setup
+if exist "pnpm-lock.yaml" (
+    echo ✅ pnpm-lock.yaml encontrado
+    echo 📦 Usando pnpm directamente en Docker
+) else (
+    echo ⚠️  No se encontró pnpm-lock.yaml
+    echo 💡 Ejecuta: pnpm install
 )
 
 echo ✅ Docker está corriendo
