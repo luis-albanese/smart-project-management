@@ -6,13 +6,22 @@ FROM base AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-# Install dependencies based on the preferred package manager
-COPY package.json package-lock.json* ./
-RUN npm ci --only=production && npm cache clean --force
+# Install dependencies based on package manager
+COPY package.json package-lock.json* pnpm-lock.yaml* ./
+
+# Install dependencies using npm (works with or without package-lock.json)
+RUN if [ -f package-lock.json ]; then \
+        echo "Using npm ci with package-lock.json"; \
+        npm ci --omit=dev && npm cache clean --force; \
+    else \
+        echo "Using npm install without package-lock.json"; \
+        npm install --production && npm cache clean --force; \
+    fi
 
 # Rebuild the source code only when needed
 FROM base AS builder
 WORKDIR /app
+
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
