@@ -3,7 +3,10 @@ import fs from 'fs';
 import path from 'path';
 
 // Ruta de la base de datos JSON
-const dbPath = path.join(process.cwd(), 'database.json');
+// En producción Docker, usar /app/data/ que tiene permisos correctos
+const dbPath = process.env.NODE_ENV === 'production' 
+  ? '/app/data/database.json'
+  : path.join(process.cwd(), 'database.json');
 
 // Estructura de la base de datos
 interface Database {
