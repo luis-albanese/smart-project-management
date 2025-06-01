@@ -1,0 +1,516 @@
+{
+  "users": [
+    {
+      "id": "admin-1",
+      "name": "Administrador",
+      "email": "dev@smartway.com.ar",
+      "password": "$2b$10$4SI69bJDh.Vh8Y4xRjSyy.NhEW/8NxJOmc51r3FKn.VLoP6oosVk2",
+      "role": "admin",
+      "department": "Administración",
+      "status": "active",
+      "avatar": "/placeholder.svg?height=40&width=40",
+      "joinDate": "2025-05-31",
+      "projectsCount": 10,
+      "assignedProjects": [
+        "project-1748737199127-mkf40d815",
+        "project-1748737199127-79owss6e8",
+        "project-1748737199127-duw12lb8e",
+        "project-1748737199127-ns23qt3ya",
+        "project-1748737199127-o98im5il3",
+        "project-1748737199127-iw5j0jjl5",
+        "project-1748737199127-ydsqf7ef2",
+        "project-1748737199127-kehkk0wyd",
+        "project-1748737199127-17j4bil45",
+        "project-1748737199127-3bgd5dl2e"
+      ],
+      "createdAt": "2025-05-31T23:23:19.535Z",
+      "updatedAt": "2025-06-01T00:33:06.094Z",
+      "lastLogin": "31/5/2025, 21:31:50"
+    },
+    {
+      "id": "user-1748737198907-u5ta1epqf",
+      "name": "Carlos Mendoza",
+      "email": "carlos.mendoza@smartway.com.ar",
+      "password": "$2b$10$bnkNhaQyil3NzP1fy57wdOt8z4syaXI7x/z/FdFXFljZWNRo0zGty",
+      "role": "developer",
+      "department": "Frontend",
+      "status": "inactive",
+      "avatar": "/placeholder.svg?height=40&width=40",
+      "joinDate": "31/5/2025",
+      "projectsCount": 5,
+      "assignedProjects": [
+        "project-1748737199127-79owss6e8",
+        "project-1748737199127-ns23qt3ya",
+        "project-1748737199127-ydsqf7ef2",
+        "project-1748737199127-kehkk0wyd",
+        "project-1748737199127-17j4bil45"
+      ],
+      "createdAt": "2025-04-18T03:37:45.906Z",
+      "updatedAt": "2025-06-01T00:30:53.349Z",
+      "lastLogin": "31/5/2025, 21:19:58"
+    },
+    {
+      "id": "user-1748737198987-o7flpodow",
+      "name": "Ana García",
+      "email": "ana.garcia@smartway.com",
+      "password": "$2b$10$5EJFumJ0HHl8vaUY.iImjuKQdNKPdbg0NiOQlWfB/mqiU0U0wsDwa",
+      "role": "designer",
+      "department": "Backend",
+      "status": "active",
+      "avatar": "/placeholder.svg?height=40&width=40",
+      "joinDate": "31/5/2025",
+      "projectsCount": 4,
+      "assignedProjects": [
+        "project-1748737199127-mkf40d815",
+        "project-1748737199127-duw12lb8e",
+        "project-1748737199127-ns23qt3ya",
+        "project-1748737199127-3bgd5dl2e"
+      ],
+      "createdAt": "2024-07-02T00:53:03.656Z",
+      "updatedAt": "2025-02-09T23:55:59.902Z",
+      "lastLogin": "31/5/2025, 21:19:58"
+    },
+    {
+      "id": "user-1748737199061-yh50pjbwl",
+      "name": "Luis Rodriguez",
+      "email": "luis.rodriguez@smartway.com",
+      "password": "$2b$10$8SJIXRJ3QfJd62SqS7PQCO/oXIhrvWeCtDzEzKrMQJkIlRFE0XuZm",
+      "role": "manager",
+      "department": "DevOps",
+      "status": "active",
+      "avatar": "/placeholder.svg?height=40&width=40",
+      "joinDate": "31/5/2025",
+      "projectsCount": 5,
+      "assignedProjects": [
+        "project-1748737199127-mkf40d815",
+        "project-1748737199127-duw12lb8e",
+        "project-1748737199127-o98im5il3",
+        "project-1748737199127-iw5j0jjl5",
+        "project-1748737199127-17j4bil45"
+      ],
+      "createdAt": "2025-01-17T05:57:06.444Z",
+      "updatedAt": "2025-01-11T00:55:30.581Z",
+      "lastLogin": "31/5/2025, 21:19:59"
+    },
+    {
+      "id": "user-1748737199126-cli5ngdyb",
+      "name": "María González",
+      "email": "maria.gonzalez@smartway.com",
+      "password": "$2b$10$bnkNhaQyil3NzP1fy57wdOt8z4syaXI7x/z/FdFXFljZWNRo0zGty",
+      "role": "developer",
+      "department": "QA",
+      "status": "active",
+      "avatar": "/placeholder.svg?height=40&width=40",
+      "joinDate": "31/5/2025",
+      "projectsCount": 4,
+      "assignedProjects": [
+        "project-1748737199127-mkf40d815",
+        "project-1748737199127-duw12lb8e",
+        "project-1748737199127-o98im5il3",
+        "project-1748737199127-iw5j0jjl5"
+      ],
+      "createdAt": "2025-03-28T13:54:16.836Z",
+      "updatedAt": "2024-12-07T19:12:58.421Z",
+      "lastLogin": "31/5/2025, 21:19:59"
+    }
+  ],
+  "projects": [
+    {
+      "id": "project-1748737199127-mkf40d815",
+      "name": "Portal Educativo",
+      "description": "Desarrollo de una plataforma integral para la gestión de clientes con funcionalidades avanzadas de CRM y analytics.",
+      "client": "Universidad Central",
+      "status": "completed",
+      "techStack": [
+        "Python",
+        "Django",
+        "PostgreSQL",
+        "Redis"
+      ],
+      "environments": [
+        {
+          "name": "Desarrollo",
+          "url": ""
+        },
+        {
+          "name": "QA",
+          "url": ""
+        },
+        {
+          "name": "Producción",
+          "url": ""
+        }
+      ],
+      "assignedUsers": [
+        "user-1748737199061-yh50pjbwl",
+        "user-1748737199126-cli5ngdyb",
+        "user-1748737198987-o7flpodow",
+        "admin-1"
+      ],
+      "comments": [
+        {
+          "id": "comment-1748737199127-haibwi27d",
+          "userId": "user-1748737199061-yh50pjbwl",
+          "content": "Proyecto iniciado correctamente. Primeras funcionalidades implementadas.",
+          "createdAt": "2025-04-06T20:29:03.521Z"
+        }
+      ],
+      "createdAt": "2025-02-16T20:05:01.090Z",
+      "updatedAt": "2025-06-01T00:44:28.700Z"
+    },
+    {
+      "id": "project-1748737199127-79owss6e8",
+      "name": "Plataforma E-commerce",
+      "description": "Plataforma CRM personalizada para mejorar la gestión de relaciones con clientes y ventas.",
+      "client": "Gobierno Municipal",
+      "status": "maintenance",
+      "techStack": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS"
+      ],
+      "environments": [
+        {
+          "name": "Desarrollo",
+          "url": ""
+        },
+        {
+          "name": "QA",
+          "url": ""
+        },
+        {
+          "name": "Producción",
+          "url": ""
+        }
+      ],
+      "assignedUsers": [
+        "admin-1",
+        "user-1748737198907-u5ta1epqf"
+      ],
+      "comments": [
+        {
+          "id": "comment-1748737199127-quuerttj1",
+          "userId": "admin-1",
+          "content": "Proyecto iniciado correctamente. Primeras funcionalidades implementadas.",
+          "createdAt": "2025-01-06T16:44:18.182Z"
+        }
+      ],
+      "createdAt": "2025-01-07T15:27:34.634Z",
+      "updatedAt": "2025-06-01T00:44:28.701Z"
+    },
+    {
+      "id": "project-1748737199127-duw12lb8e",
+      "name": "CRM Empresarial",
+      "description": "Dashboard interactivo para visualización de métricas de negocio con gráficos dinámicos y reportes.",
+      "client": "Universidad Central",
+      "status": "completed",
+      "techStack": [
+        "PHP",
+        "Laravel",
+        "MySQL",
+        "Vue.js"
+      ],
+      "environments": [
+        {
+          "name": "Desarrollo",
+          "url": ""
+        },
+        {
+          "name": "QA",
+          "url": ""
+        },
+        {
+          "name": "Producción",
+          "url": ""
+        }
+      ],
+      "assignedUsers": [
+        "user-1748737199126-cli5ngdyb",
+        "user-1748737199061-yh50pjbwl",
+        "user-1748737198987-o7flpodow",
+        "admin-1"
+      ],
+      "comments": [
+        {
+          "id": "comment-1748737199127-m8ahojx0x",
+          "userId": "user-1748737199126-cli5ngdyb",
+          "content": "Proyecto iniciado correctamente. Primeras funcionalidades implementadas.",
+          "createdAt": "2025-05-10T10:25:05.564Z"
+        }
+      ],
+      "createdAt": "2025-04-09T11:35:42.370Z",
+      "updatedAt": "2025-06-01T00:44:28.701Z"
+    },
+    {
+      "id": "project-1748737199127-ns23qt3ya",
+      "name": "Sistema de Gestión de Clientes",
+      "description": "Aplicación de salud para seguimiento de pacientes con historiales médicos y telemedicina.",
+      "client": "Gobierno Municipal",
+      "status": "active",
+      "techStack": [
+        "React Native",
+        "Expo",
+        "Firebase",
+        "AsyncStorage"
+      ],
+      "environments": [
+        {
+          "name": "Desarrollo",
+          "url": ""
+        },
+        {
+          "name": "QA",
+          "url": ""
+        },
+        {
+          "name": "Producción",
+          "url": ""
+        }
+      ],
+      "assignedUsers": [
+        "user-1748737198987-o7flpodow",
+        "user-1748737198907-u5ta1epqf",
+        "admin-1"
+      ],
+      "comments": [],
+      "createdAt": "2025-04-04T16:48:57.342Z",
+      "updatedAt": "2025-06-01T00:44:28.701Z"
+    },
+    {
+      "id": "project-1748737199127-o98im5il3",
+      "name": "Portal de Empleados",
+      "description": "Dashboard interactivo para visualización de métricas de negocio con gráficos dinámicos y reportes.",
+      "client": "Constructora Beta",
+      "status": "completed",
+      "techStack": [
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "JWT"
+      ],
+      "environments": [
+        {
+          "name": "Desarrollo",
+          "url": ""
+        },
+        {
+          "name": "QA",
+          "url": ""
+        },
+        {
+          "name": "Producción",
+          "url": ""
+        }
+      ],
+      "assignedUsers": [
+        "user-1748737199126-cli5ngdyb",
+        "admin-1",
+        "user-1748737199061-yh50pjbwl"
+      ],
+      "comments": [],
+      "createdAt": "2025-01-23T20:19:27.603Z",
+      "updatedAt": "2025-06-01T00:44:28.702Z"
+    },
+    {
+      "id": "project-1748737199127-iw5j0jjl5",
+      "name": "Aplicación de Delivery",
+      "description": "Aplicación de delivery con geolocalización, tracking en tiempo real y sistema de pagos integrado.",
+      "client": "Universidad Central",
+      "status": "completed",
+      "techStack": [
+        "PHP",
+        "Laravel",
+        "MySQL",
+        "Vue.js"
+      ],
+      "environments": [
+        {
+          "name": "Desarrollo",
+          "url": ""
+        },
+        {
+          "name": "QA",
+          "url": ""
+        },
+        {
+          "name": "Producción",
+          "url": ""
+        }
+      ],
+      "assignedUsers": [
+        "user-1748737199061-yh50pjbwl",
+        "admin-1",
+        "user-1748737199126-cli5ngdyb"
+      ],
+      "comments": [
+        {
+          "id": "comment-1748737199127-yx6yyjgfn",
+          "userId": "user-1748737199061-yh50pjbwl",
+          "content": "Proyecto iniciado correctamente. Primeras funcionalidades implementadas.",
+          "createdAt": "2025-02-14T12:40:49.638Z"
+        }
+      ],
+      "createdAt": "2025-05-11T04:15:31.665Z",
+      "updatedAt": "2025-06-01T00:44:28.702Z"
+    },
+    {
+      "id": "project-1748737199127-ydsqf7ef2",
+      "name": "Marketplace Digital",
+      "description": "Aplicación de delivery con geolocalización, tracking en tiempo real y sistema de pagos integrado.",
+      "client": "Constructora Beta",
+      "status": "maintenance",
+      "techStack": [
+        "Angular",
+        "TypeScript",
+        "RxJS",
+        "Angular Material"
+      ],
+      "environments": [
+        {
+          "name": "Desarrollo",
+          "url": ""
+        },
+        {
+          "name": "QA",
+          "url": ""
+        },
+        {
+          "name": "Producción",
+          "url": ""
+        }
+      ],
+      "assignedUsers": [
+        "user-1748737198907-u5ta1epqf",
+        "admin-1"
+      ],
+      "comments": [
+        {
+          "id": "comment-1748737199127-dyjnq1bjt",
+          "userId": "user-1748737198907-u5ta1epqf",
+          "content": "Proyecto iniciado correctamente. Primeras funcionalidades implementadas.",
+          "createdAt": "2025-02-04T13:09:31.011Z"
+        }
+      ],
+      "createdAt": "2024-12-01T22:29:27.447Z",
+      "updatedAt": "2025-06-01T00:44:28.702Z"
+    },
+    {
+      "id": "project-1748737199127-kehkk0wyd",
+      "name": "App Mobile Corporativa",
+      "description": "Sistema automatizado de facturación con generación de reportes y integración contable.",
+      "client": "Banco Nacional",
+      "status": "paused",
+      "techStack": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS"
+      ],
+      "environments": [
+        {
+          "name": "Desarrollo",
+          "url": ""
+        },
+        {
+          "name": "QA",
+          "url": ""
+        },
+        {
+          "name": "Producción",
+          "url": ""
+        }
+      ],
+      "assignedUsers": [
+        "admin-1",
+        "user-1748737198907-u5ta1epqf"
+      ],
+      "comments": [
+        {
+          "id": "comment-1748737199127-78cm03pz1",
+          "userId": "admin-1",
+          "content": "Proyecto iniciado correctamente. Primeras funcionalidades implementadas.",
+          "createdAt": "2025-04-18T19:16:57.871Z"
+        }
+      ],
+      "createdAt": "2024-12-11T12:36:40.650Z",
+      "updatedAt": "2025-06-01T00:44:28.702Z"
+    },
+    {
+      "id": "project-1748737199127-17j4bil45",
+      "name": "App de Monitoreo",
+      "description": "Portal educativo con gestión de cursos, estudiantes y contenido multimedia interactivo.",
+      "client": "MedCenter",
+      "status": "completed",
+      "techStack": [
+        "React Native",
+        "Expo",
+        "Firebase",
+        "AsyncStorage"
+      ],
+      "environments": [
+        {
+          "name": "Desarrollo",
+          "url": ""
+        },
+        {
+          "name": "QA",
+          "url": ""
+        },
+        {
+          "name": "Producción",
+          "url": ""
+        }
+      ],
+      "assignedUsers": [
+        "admin-1",
+        "user-1748737199061-yh50pjbwl",
+        "user-1748737198907-u5ta1epqf"
+      ],
+      "comments": [
+        {
+          "id": "comment-1748737199127-tddjiihz5",
+          "userId": "admin-1",
+          "content": "Proyecto iniciado correctamente. Primeras funcionalidades implementadas.",
+          "createdAt": "2025-03-27T01:28:45.784Z"
+        }
+      ],
+      "createdAt": "2025-04-22T06:09:03.851Z",
+      "updatedAt": "2025-06-01T00:44:28.702Z"
+    },
+    {
+      "id": "project-1748737199127-3bgd5dl2e",
+      "name": "Plataforma E-commerce",
+      "description": "Sistema robusto de control de inventario con alertas automáticas y integración con proveedores.",
+      "client": "Banco Nacional",
+      "status": "paused",
+      "techStack": [
+        "PHP",
+        "Laravel",
+        "MySQL",
+        "Vue.js"
+      ],
+      "environments": [
+        {
+          "name": "Desarrollo",
+          "url": ""
+        },
+        {
+          "name": "QA",
+          "url": ""
+        },
+        {
+          "name": "Producción",
+          "url": ""
+        }
+      ],
+      "assignedUsers": [
+        "user-1748737198987-o7flpodow",
+        "admin-1"
+      ],
+      "comments": [],
+      "createdAt": "2024-10-13T16:31:15.454Z",
+      "updatedAt": "2025-06-01T00:44:28.703Z"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  smartway-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - NODE_ENV=production
+      - JWT_SECRET=${JWT_SECRET}
+      - DATABASE_PATH=/app/data/database.json
+      - PORT=3000
+    volumes:
+      - smartway_project_management_data:/app/data
+    restart: unless-stopped
+    networks:
+      - smartway_project_management_network
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "6012:80"
+      - "6013:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./ssl:/etc/nginx/ssl:ro  # Para certificados SSL
+    depends_on:
+      - smartway-app
+    restart: unless-stopped
+    networks:
+      - smartway_project_management_network
+
+volumes:
+  smartway_project_management_data:
+    driver: local
+
+networks:
+  smartway_project_management_network:
+    driver: bridge 
