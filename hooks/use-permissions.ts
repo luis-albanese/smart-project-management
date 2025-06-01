@@ -84,8 +84,10 @@ export function usePermissions() {
         break
       
       case 'manager':
-        // Manager puede ver estadísticas pero no gestionar usuarios
+        // Manager puede ver estadísticas, editar proyectos y asignar usuarios, pero no crear/eliminar proyectos ni gestionar usuarios
+        newPermissions.canEditProjects = true
         newPermissions.canViewStats = true
+        newPermissions.canAssignUsers = true
         break
       
       case 'developer':

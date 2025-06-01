@@ -16,15 +16,15 @@
         "project-1748794935224-qx7j28luz"
       ],
       "createdAt": "2025-05-31T23:23:19.535Z",
-      "updatedAt": "2025-06-01T02:40:38.203Z",
-      "lastLogin": "31/5/2025, 23:40:38"
+      "updatedAt": "2025-06-01T16:31:58.704Z",
+      "lastLogin": "1/6/2025, 13:31:58"
     },
     {
       "id": "user-1748794935040-4miguelzf",
       "name": "Carlos Mendoza",
       "email": "carlos.mendoza@smartway.com",
-      "password": "$2b$10$.mG.4OPdyWb5.EIuLOsC3.nHq46I.ynw7ihWe7yz/iTGo2xFMCcAS",
-      "role": "developer",
+      "password": "$2b$10$fL1FraF6MxkSTpGdKNwdL.rNOFtoaST7.ug35m7Q23FWnn7QXTcES",
+      "role": "manager",
       "department": "Frontend",
       "status": "active",
       "avatar": "/placeholder.svg?height=40&width=40",
@@ -37,8 +37,8 @@
         "project-1748794935224-fyg9v1okk"
       ],
       "createdAt": "2025-01-02T22:43:32.481Z",
-      "updatedAt": "2025-03-03T04:48:25.062Z",
-      "lastLogin": "1/6/2025, 13:22:15"
+      "updatedAt": "2025-06-01T16:32:22.010Z",
+      "lastLogin": "1/6/2025, 13:32:22"
     },
     {
       "id": "user-1748794935109-cylu3yhsb",
@@ -50,15 +50,16 @@
       "status": "active",
       "avatar": "/placeholder.svg?height=40&width=40",
       "joinDate": "1/6/2025",
-      "projectsCount": 4,
+      "projectsCount": 5,
       "assignedProjects": [
         "project-1748794935224-jybt4bbw4",
         "project-1748794935224-ozaoqyls1",
         "project-1748794935224-kckhk54ti",
-        "project-1748794935224-6c71pafxc"
+        "project-1748794935224-6c71pafxc",
+        "project-1748794935224-fyg9v1okk"
       ],
       "createdAt": "2025-01-21T09:30:21.948Z",
-      "updatedAt": "2025-06-01T16:23:12.388Z",
+      "updatedAt": "2025-06-01T16:32:47.461Z",
       "lastLogin": "1/6/2025, 13:22:15"
     },
     {
@@ -192,7 +193,7 @@
       "id": "project-1748794935224-ozaoqyls1",
       "name": "Plataforma E-commerce",
       "description": "Plataforma CRM personalizada para mejorar la gestión de relaciones con clientes y ventas.",
-      "client": "Logística Sur",
+      "client": "Logística Sur SA",
       "status": "paused",
       "priority": "low",
       "startDate": "2024-12-04",
@@ -225,7 +226,7 @@
       ],
       "comments": [],
       "createdAt": "2025-04-23T18:50:40.279Z",
-      "updatedAt": "2025-01-17T04:14:00.541Z"
+      "updatedAt": "2025-06-01T16:30:35.811Z"
     },
     {
       "id": "project-1748794935224-kckhk54ti",
@@ -400,7 +401,7 @@
       "id": "project-1748794935224-fyg9v1okk",
       "name": "CRM Empresarial",
       "description": "Marketplace digital con múltiples vendedores, sistema de reviews y gestión de comisiones.",
-      "client": "Food Delivery",
+      "client": "Food Delivery SRL",
       "status": "active",
       "priority": "low",
       "startDate": "2024-10-19",
@@ -426,7 +427,8 @@
       "assignedUsers": [
         "user-1748794935165-gt6jcxwlb",
         "user-1748794935040-4miguelzf",
-        "user-1748794935223-1j9meoc4z"
+        "user-1748794935223-1j9meoc4z",
+        "user-1748794935109-cylu3yhsb"
       ],
       "comments": [
         {
@@ -437,7 +439,7 @@
         }
       ],
       "createdAt": "2024-11-04T14:51:04.482Z",
-      "updatedAt": "2025-03-14T22:07:06.385Z"
+      "updatedAt": "2025-06-01T16:32:47.368Z"
     },
     {
       "id": "project-1748794935224-qx7j28luz",

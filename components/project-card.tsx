@@ -67,9 +67,10 @@ export function ProjectCard({
   }
 
   const isAdmin = userRole === 'admin'
-  const canEdit = isAdmin && onEdit
+  const isManager = userRole === 'manager'
+  const canEdit = (isAdmin || isManager) && onEdit
   const canDelete = isAdmin && onDelete
-  const canAssignUsers = isAdmin
+  const canAssignUsers = (isAdmin || isManager)
 
   const handleDeleteClick = () => {
     setShowDeleteDialog(true)

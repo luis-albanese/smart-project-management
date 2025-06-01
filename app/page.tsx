@@ -135,8 +135,10 @@ export default function Dashboard() {
   // Determinar cuántos proyectos mostrar
   const projectsToShow = showAllProjects ? filteredProjects : filteredProjects.slice(0, 6)
 
-  // Solo admin puede crear, editar y eliminar
-  const isAdmin = currentUser?.role === 'admin'
+  // Usar permisos del hook en lugar de solo verificar admin
+  const canCreateProjects = permissions.canCreateProjects
+  const canEditProjects = permissions.canEditProjects
+  const canDeleteProjects = permissions.canDeleteProjects
 
   if (loading || permissionsLoading || usersLoading) {
     return (
@@ -171,7 +173,7 @@ export default function Dashboard() {
                 Gestiona y supervisa todos los proyectos de la empresa
               </p>
             </div>
-            {isAdmin && (
+            {canCreateProjects && (
               <Link href="/add-project">
                 <Button>
                   <Plus className="h-4 w-4 mr-2" />
@@ -283,12 +285,12 @@ export default function Dashboard() {
                       <AlertCircle className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
                       <h3 className="text-lg font-medium mb-2">No hay proyectos</h3>
                       <p className="text-muted-foreground mb-4">
-                        {isAdmin 
+                        {canCreateProjects 
                           ? 'Comienza creando tu primer proyecto'
-                          : 'No tienes proyectos asignados aún'
+                          : 'No tienes permisos para crear proyectos'
                         }
                       </p>
-                      {isAdmin && (
+                      {canCreateProjects && (
                         <Link href="/add-project">
                           <Button>
                             <Plus className="h-4 w-4 mr-2" />
@@ -308,8 +310,8 @@ export default function Dashboard() {
                     project={project}
                     users={users}
                     userRole={currentUser?.role}
-                    onEdit={isAdmin ? handleEditProject : undefined}
-                    onDelete={isAdmin ? handleDeleteProject : undefined}
+                    onEdit={canEditProjects ? handleEditProject : undefined}
+                    onDelete={canDeleteProjects ? handleDeleteProject : undefined}
                     onRefresh={refreshProjects}
                   />
                 ))}
@@ -318,8 +320,8 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* Dialog para editar proyecto - solo admin */}
-        {isAdmin && (
+        {/* Dialog para editar proyecto - admins y managers */}
+        {canEditProjects && (
           <EditProjectDialog
             isOpen={showEditDialog}
             onClose={() => {
