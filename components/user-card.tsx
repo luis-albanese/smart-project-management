@@ -12,7 +12,6 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { MoreVertical, Pencil, Trash2, Mail, Calendar, Clock, FolderOpen, User, Eye } from "lucide-react"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
-import { ConfirmationDialog } from "@/components/confirmation-dialog"
 import { useState, useEffect } from "react"
 
 type UserType = {
@@ -32,16 +31,14 @@ type UserType = {
 interface UserCardProps {
   user: UserType
   onEdit?: (user: UserType) => void
-  onDelete?: (userId: string) => void
+  onDelete?: (user: UserType) => void
 }
 
 export function UserCard({ user, onEdit, onDelete }: UserCardProps) {
   const [showProjectsDialog, setShowProjectsDialog] = useState(false)
-  const [showDeleteDialog, setShowDeleteDialog] = useState(false)
   const [projectsDetails, setProjectsDetails] = useState<Array<{id: string, name: string, client: string}>>([])
   const [loadingProjects, setLoadingProjects] = useState(false)
 
-  // Cargar detalles de proyectos cuando se abre el dialog
   useEffect(() => {
     if (showProjectsDialog && user.assignedProjects?.length > 0) {
       fetchProjectsDetails()
@@ -55,7 +52,6 @@ export function UserCard({ user, onEdit, onDelete }: UserCardProps) {
       const data = await response.json()
 
       if (response.ok) {
-        // Filtrar solo los proyectos asignados al usuario
         const userProjects = data.projects.filter((project: any) => 
           user.assignedProjects.includes(project.id)
         ).map((project: any) => ({
@@ -99,12 +95,8 @@ export function UserCard({ user, onEdit, onDelete }: UserCardProps) {
   }
 
   const handleDeleteClick = () => {
-    setShowDeleteDialog(true)
-  }
-
-  const handleConfirmDelete = () => {
     if (onDelete) {
-      onDelete(user.id)
+      onDelete(user)
     }
   }
 
@@ -185,7 +177,6 @@ export function UserCard({ user, onEdit, onDelete }: UserCardProps) {
         </div>
       </CardFooter>
 
-      {/* Dialog para mostrar proyectos asignados */}
       <Dialog open={showProjectsDialog} onOpenChange={setShowProjectsDialog}>
         <DialogContent className="sm:max-w-[500px] max-h-[80vh] overflow-hidden flex flex-col">
           <DialogHeader>
@@ -224,18 +215,6 @@ export function UserCard({ user, onEdit, onDelete }: UserCardProps) {
           </div>
         </DialogContent>
       </Dialog>
-
-      {/* Modal de confirmación para eliminar */}
-      <ConfirmationDialog
-        isOpen={showDeleteDialog}
-        onClose={() => setShowDeleteDialog(false)}
-        onConfirm={handleConfirmDelete}
-        title="Eliminar Usuario"
-        description={`¿Estás seguro de que quieres eliminar a ${user.name}? Esta acción no se puede deshacer.`}
-        confirmText="Eliminar"
-        cancelText="Cancelar"
-        variant="destructive"
-      />
     </Card>
   )
 }

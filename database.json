@@ -10,305 +10,121 @@
       "status": "active",
       "avatar": "/placeholder.svg?height=40&width=40",
       "joinDate": "2025-05-31",
-      "projectsCount": 4,
+      "projectsCount": 2,
       "assignedProjects": [
-        "project-1748739941380-bn0st8rxi",
-        "project-1748739941380-ycjyr96qb",
-        "project-1748739941380-h954fcurd",
-        "project-1748739941380-2v785x5u4"
+        "project-1748794935224-c0qneh78i",
+        "project-1748794935224-qx7j28luz"
       ],
       "createdAt": "2025-05-31T23:23:19.535Z",
       "updatedAt": "2025-06-01T02:40:38.203Z",
       "lastLogin": "31/5/2025, 23:40:38"
     },
     {
-      "id": "user-1748739941155-f909337ti",
+      "id": "user-1748794935040-4miguelzf",
       "name": "Carlos Mendoza",
-      "email": "carlos.mendoza@smartway.com.ar",
-      "password": "$2b$10$vHnWJdzzj9ffWDujwvI55O1fAAlRIWsyjtyC1CRqHNE9BQ4qDin1q",
+      "email": "carlos.mendoza@smartway.com",
+      "password": "$2b$10$.mG.4OPdyWb5.EIuLOsC3.nHq46I.ynw7ihWe7yz/iTGo2xFMCcAS",
       "role": "developer",
       "department": "Frontend",
       "status": "active",
       "avatar": "/placeholder.svg?height=40&width=40",
-      "joinDate": "31/5/2025",
-      "projectsCount": 7,
-      "assignedProjects": [
-        "project-1748739941380-bn0st8rxi",
-        "project-1748739941380-2v785x5u4",
-        "project-1748739941380-aque559bc",
-        "project-1748739941380-ycjyr96qb",
-        "project-1748739941380-33yedqmlv",
-        "project-1748739941380-h954fcurd",
-        "project-1748739941380-klss4s49k"
-      ],
-      "createdAt": "2025-05-13T03:40:19.996Z",
-      "updatedAt": "2025-06-01T02:33:08.408Z",
-      "lastLogin": "31/5/2025, 23:33:08"
-    },
-    {
-      "id": "user-1748739941314-cxz11b6av",
-      "name": "Luis Rodriguez",
-      "email": "luis.rodriguez@smartway.com",
-      "password": "$2b$10$JlbIIvVK481uMuoNSBsox.h.tQaCOiKyWVxwvWErqbgZebFNDQpz2",
-      "role": "manager",
-      "department": "DevOps",
-      "status": "active",
-      "avatar": "/placeholder.svg?height=40&width=40",
-      "joinDate": "31/5/2025",
+      "joinDate": "1/6/2025",
       "projectsCount": 4,
       "assignedProjects": [
-        "project-1748739941380-2v785x5u4",
-        "project-1748739941380-33yedqmlv",
-        "project-1748739941380-h954fcurd",
-        "project-1748739941380-klss4s49k"
+        "project-1748794935224-c0qneh78i",
+        "project-1748794935224-jybt4bbw4",
+        "project-1748794935224-8nmak3mgk",
+        "project-1748794935224-fyg9v1okk"
       ],
-      "createdAt": "2024-09-08T04:49:04.731Z",
-      "updatedAt": "2025-06-01T01:40:45.894Z",
-      "lastLogin": "31/5/2025, 22:05:41"
+      "createdAt": "2025-01-02T22:43:32.481Z",
+      "updatedAt": "2025-03-03T04:48:25.062Z",
+      "lastLogin": "1/6/2025, 13:22:15"
     },
     {
-      "id": "user-1748739941379-65fa72qii",
+      "id": "user-1748794935109-cylu3yhsb",
+      "name": "Ana García",
+      "email": "ana.garcia@smartway.com",
+      "password": "$2b$10$lJ/ECsGOJhNKbe9PsMcofuGJ4VVTyOtfH1IMNOr4gT4J7fcu5bcS2",
+      "role": "designer",
+      "department": "Backend",
+      "status": "active",
+      "avatar": "/placeholder.svg?height=40&width=40",
+      "joinDate": "1/6/2025",
+      "projectsCount": 4,
+      "assignedProjects": [
+        "project-1748794935224-jybt4bbw4",
+        "project-1748794935224-ozaoqyls1",
+        "project-1748794935224-kckhk54ti",
+        "project-1748794935224-6c71pafxc"
+      ],
+      "createdAt": "2025-01-21T09:30:21.948Z",
+      "updatedAt": "2025-06-01T16:23:12.388Z",
+      "lastLogin": "1/6/2025, 13:22:15"
+    },
+    {
+      "id": "user-1748794935165-gt6jcxwlb",
+      "name": "Luis Rodriguez",
+      "email": "luis.rodriguez@smartway.com",
+      "password": "$2b$10$3bguo0MVL602tDuebKy3VONIl/mFGIzm.nH228NwknwHTEicOSse6",
+      "role": "manager",
+      "department": "DevOps",
+      "status": "inactive",
+      "avatar": "/placeholder.svg?height=40&width=40",
+      "joinDate": "1/6/2025",
+      "projectsCount": 4,
+      "assignedProjects": [
+        "project-1748794935224-jybt4bbw4",
+        "project-1748794935224-ozaoqyls1",
+        "project-1748794935224-kckhk54ti",
+        "project-1748794935224-fyg9v1okk"
+      ],
+      "createdAt": "2024-08-28T23:12:58.588Z",
+      "updatedAt": "2025-06-01T16:23:12.293Z",
+      "lastLogin": "1/6/2025, 13:22:15"
+    },
+    {
+      "id": "user-1748794935223-1j9meoc4z",
       "name": "María González",
       "email": "maria.gonzalez@smartway.com",
-      "password": "$2b$10$vzowRYTvx43Tq3i9WVaBa.9xhWHUHZx0pHL628V8oGGHySESy34ie",
+      "password": "$2b$10$0mwkNYhdwrLRka1tIVw7OO4m0pF9PndR27mkehMaYPZODfYx4VIpK",
       "role": "developer",
       "department": "QA",
       "status": "active",
       "avatar": "/placeholder.svg?height=40&width=40",
-      "joinDate": "31/5/2025",
-      "projectsCount": 2,
+      "joinDate": "1/6/2025",
+      "projectsCount": 3,
       "assignedProjects": [
-        "project-1748739941380-aque559bc",
-        "project-1748739941380-33yedqmlv"
+        "project-1748794935224-kckhk54ti",
+        "project-1748794935224-q2eomcz7h",
+        "project-1748794935224-fyg9v1okk"
       ],
-      "createdAt": "2024-12-21T10:40:45.071Z",
-      "updatedAt": "2025-06-01T01:30:53.141Z",
-      "lastLogin": "31/5/2025, 22:05:41"
-    },
-    {
-      "id": "user-1748740347843-ls6imwx",
-      "name": "Juan",
-      "email": "juan@smartway.com.ar",
-      "password": "$2b$10$/5qrOfdZT72kAXpCQuwR3eL8RcqBQnsv3K2haTdEkIrepnQTApGg6",
-      "role": "manager",
-      "department": "IT",
-      "status": "active",
-      "avatar": "/placeholder.svg?height=40&width=40&query=avatar-juan",
-      "joinDate": "2025-06-01",
-      "projectsCount": 1,
-      "assignedProjects": [
-        "project-1748740290115-l2xtyg8"
-      ],
-      "createdAt": "2025-06-01T01:12:27.843Z",
-      "updatedAt": "2025-06-01T01:31:55.749Z",
-      "lastLogin": "31/5/2025, 22:31:55"
+      "createdAt": "2025-02-06T15:45:56.230Z",
+      "updatedAt": "2025-06-01T16:23:12.202Z",
+      "lastLogin": "1/6/2025, 13:22:15"
     }
   ],
   "projects": [
     {
-      "id": "project-1748739941380-bn0st8rxi",
-      "name": "CRM Empresarial",
-      "description": "Aplicación de monitoreo de sistemas con alertas en tiempo real y métricas de rendimiento.",
-      "client": "Gobierno Municipal",
-      "status": "paused",
-      "priority": "low",
-      "startDate": "2024-11-07",
-      "endDate": "2025-01-27",
-      "environments": [
-        {
-          "name": "Desarrollo",
-          "url": "https://dev-crm-empresarial.smartway.com"
-        },
-        {
-          "name": "QA",
-          "url": "https://qa-crm-empresarial.smartway.com"
-        }
-      ],
-      "techStack": [
-        "Python",
-        "Django",
-        "PostgreSQL",
-        "Redis"
-      ],
-      "gitlabUrl": "https://gitlab.smartway.com/gobierno-municipal/crm-empresarial",
-      "assignedUsers": [
-        "admin-1",
-        "user-1748739941155-f909337ti"
-      ],
-      "comments": [
-        {
-          "id": "comment-1748739941380-z69mpavz0",
-          "userId": "admin-1",
-          "content": "Proyecto iniciado correctamente. Primeras funcionalidades implementadas.",
-          "createdAt": "2025-02-07T04:41:13.341Z"
-        }
-      ],
-      "createdAt": "2024-07-31T23:37:03.758Z",
-      "updatedAt": "2025-06-01T01:47:13.769Z"
-    },
-    {
-      "id": "project-1748739941380-2v785x5u4",
-      "name": "Plataforma E-commerce",
+      "id": "project-1748794935224-c0qneh78i",
+      "name": "Marketplace Digital",
       "description": "Aplicación de delivery con geolocalización, tracking en tiempo real y sistema de pagos integrado.",
-      "client": "TechStartup Inc",
-      "status": "active",
+      "client": "Universidad Central",
+      "status": "maintenance",
       "priority": "low",
-      "startDate": "2024-06-03",
-      "endDate": "2025-03-15",
+      "startDate": "2024-08-03",
+      "endDate": "2025-05-26",
       "environments": [
         {
           "name": "Desarrollo",
-          "url": "https://dev-plataforma-e-commerce.smartway.com"
-        }
-      ],
-      "techStack": [
-        "Angular",
-        "SQL"
-      ],
-      "docsUrl": "https://docs.smartway.com/plataforma-e-commerce",
-      "gitlabUrl": "https://gitlab.smartway.com/techstartup-inc/plataforma-e-commerce",
-      "assignedUsers": [
-        "user-1748739941314-cxz11b6av",
-        "user-1748739941155-f909337ti",
-        "admin-1"
-      ],
-      "comments": [],
-      "createdAt": "2025-03-21T13:52:40.645Z",
-      "updatedAt": "2025-06-01T02:30:42.593Z"
-    },
-    {
-      "id": "project-1748739941380-aque559bc",
-      "name": "App de Monitoreo",
-      "description": "Aplicación de salud para seguimiento de pacientes con historiales médicos y telemedicina.",
-      "client": "Constructora Beta",
-      "status": "archived",
-      "priority": "low",
-      "startDate": "2025-03-25",
-      "endDate": "",
-      "environments": [
-        {
-          "name": "Desarrollo",
-          "url": "https://dev-app-de-monitoreo.smartway.com"
+          "url": "https://dev-marketplace-digital.smartway.com"
         },
         {
           "name": "QA",
-          "url": "https://qa-app-de-monitoreo.smartway.com"
+          "url": "https://qa-marketplace-digital.smartway.com"
         },
         {
           "name": "Producción",
-          "url": "https://app-de-monitoreo.smartway.com"
-        }
-      ],
-      "techStack": [
-        "PHP",
-        "Laravel",
-        "MySQL",
-        "Vue.js"
-      ],
-      "gitlabUrl": "https://gitlab.smartway.com/constructora-beta/app-de-monitoreo",
-      "assignedUsers": [
-        "user-1748739941379-65fa72qii",
-        "user-1748739941155-f909337ti"
-      ],
-      "comments": [
-        {
-          "id": "comment-1748739941380-6x7gg3fg7",
-          "userId": "user-1748739941379-65fa72qii",
-          "content": "Proyecto iniciado correctamente. Primeras funcionalidades implementadas.",
-          "createdAt": "2025-05-14T15:41:25.462Z"
-        }
-      ],
-      "createdAt": "2025-01-19T13:43:17.895Z",
-      "updatedAt": "2025-06-01T03:47:36.517Z"
-    },
-    {
-      "id": "project-1748739941380-ycjyr96qb",
-      "name": "App de Monitoreo",
-      "description": "Aplicación de salud para seguimiento de pacientes con historiales médicos y telemedicina.",
-      "client": "Seguros La Paz",
-      "status": "paused",
-      "priority": "low",
-      "startDate": "2025-03-07",
-      "endDate": "2025-05-06",
-      "environments": [
-        {
-          "name": "Desarrollo",
-          "url": "https://dev-app-de-monitoreo.smartway.com"
-        }
-      ],
-      "techStack": [
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "JWT"
-      ],
-      "docsUrl": "https://docs.smartway.com/app-de-monitoreo",
-      "gitlabUrl": "https://gitlab.smartway.com/seguros-la-paz/app-de-monitoreo",
-      "assignedUsers": [
-        "admin-1",
-        "user-1748739941155-f909337ti"
-      ],
-      "comments": [],
-      "createdAt": "2024-08-19T14:03:15.456Z",
-      "updatedAt": "2025-06-01T01:47:14.110Z"
-    },
-    {
-      "id": "project-1748739941380-33yedqmlv",
-      "name": "CRM Empresarial",
-      "description": "Sistema automatizado de facturación con generación de reportes y integración contable.",
-      "client": "Gobierno Municipal",
-      "status": "completed",
-      "priority": "low",
-      "startDate": "2025-05-14",
-      "endDate": "2025-02-06",
-      "environments": [
-        {
-          "name": "Desarrollo",
-          "url": "https://dev-crm-empresarial.smartway.com"
-        },
-        {
-          "name": "QA",
-          "url": "https://qa-crm-empresarial.smartway.com"
-        },
-        {
-          "name": "Producción",
-          "url": "https://crm-empresarial.smartway.com"
-        }
-      ],
-      "techStack": [
-        "Python",
-        "Django",
-        "PostgreSQL",
-        "Redis"
-      ],
-      "docsUrl": "https://docs.smartway.com/crm-empresarial",
-      "gitlabUrl": "https://gitlab.smartway.com/gobierno-municipal/crm-empresarial",
-      "assignedUsers": [
-        "user-1748739941314-cxz11b6av",
-        "user-1748739941155-f909337ti",
-        "user-1748739941379-65fa72qii"
-      ],
-      "comments": [],
-      "createdAt": "2024-08-26T02:25:44.737Z",
-      "updatedAt": "2024-12-09T19:14:22.542Z"
-    },
-    {
-      "id": "project-1748739941380-h954fcurd",
-      "name": "App Mobile Corporativa",
-      "description": "Aplicación de delivery con geolocalización, tracking en tiempo real y sistema de pagos integrado.",
-      "client": "Seguros La Paz",
-      "status": "active",
-      "priority": "low",
-      "startDate": "2024-12-21",
-      "endDate": "2024-12-13",
-      "environments": [
-        {
-          "name": "Desarrollo",
-          "url": "https://dev-app-mobile-corporativa.smartway.com"
-        },
-        {
-          "name": "QA",
-          "url": "https://qa-app-mobile-corporativa.smartway.com"
+          "url": "https://marketplace-digital.smartway.com"
         }
       ],
       "techStack": [
@@ -317,37 +133,160 @@
         "MySQL",
         "Docker"
       ],
-      "docsUrl": "https://docs.smartway.com/app-mobile-corporativa",
-      "gitlabUrl": "https://gitlab.smartway.com/seguros-la-paz/app-mobile-corporativa",
+      "docsUrl": "https://docs.smartway.com/marketplace-digital",
+      "gitlabUrl": "https://gitlab.smartway.com/universidad-central/marketplace-digital",
       "assignedUsers": [
-        "user-1748739941314-cxz11b6av",
         "admin-1",
-        "user-1748739941155-f909337ti"
+        "user-1748794935040-4miguelzf"
       ],
       "comments": [
         {
-          "id": "comment-1748739941380-u5j9w5x03",
-          "userId": "user-1748739941314-cxz11b6av",
+          "id": "comment-1748794935224-z92c07o5r",
+          "userId": "admin-1",
           "content": "Proyecto iniciado correctamente. Primeras funcionalidades implementadas.",
-          "createdAt": "2025-03-21T19:38:48.127Z"
+          "createdAt": "2025-05-20T22:56:11.535Z"
         }
       ],
-      "createdAt": "2024-08-28T08:37:30.740Z",
-      "updatedAt": "2025-06-01T01:47:14.221Z"
+      "createdAt": "2024-07-27T19:57:32.762Z",
+      "updatedAt": "2024-12-06T15:04:24.269Z"
     },
     {
-      "id": "project-1748739941380-klss4s49k",
-      "name": "App Mobile Corporativa",
-      "description": "Dashboard interactivo para visualización de métricas de negocio con gráficos dinámicos y reportes.",
+      "id": "project-1748794935224-jybt4bbw4",
+      "name": "Sistema de Facturación",
+      "description": "Aplicación de monitoreo de sistemas con alertas en tiempo real y métricas de rendimiento.",
       "client": "Constructora Beta",
-      "status": "active",
+      "status": "maintenance",
       "priority": "low",
-      "startDate": "2024-06-04",
-      "endDate": "2024-12-27",
+      "startDate": "2024-10-01",
+      "endDate": "2025-01-11",
       "environments": [
         {
           "name": "Desarrollo",
-          "url": "https://dev-app-mobile-corporativa.smartway.com"
+          "url": "https://dev-sistema-de-facturación.smartway.com"
+        }
+      ],
+      "techStack": [
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "JWT"
+      ],
+      "docsUrl": "https://docs.smartway.com/sistema-de-facturación",
+      "assignedUsers": [
+        "user-1748794935109-cylu3yhsb",
+        "user-1748794935040-4miguelzf",
+        "user-1748794935165-gt6jcxwlb"
+      ],
+      "comments": [
+        {
+          "id": "comment-1748794935224-o7wypebb7",
+          "userId": "user-1748794935109-cylu3yhsb",
+          "content": "Proyecto iniciado correctamente. Primeras funcionalidades implementadas.",
+          "createdAt": "2024-12-18T07:39:13.189Z"
+        }
+      ],
+      "createdAt": "2024-08-27T10:29:32.980Z",
+      "updatedAt": "2024-12-13T15:54:49.153Z"
+    },
+    {
+      "id": "project-1748794935224-ozaoqyls1",
+      "name": "Plataforma E-commerce",
+      "description": "Plataforma CRM personalizada para mejorar la gestión de relaciones con clientes y ventas.",
+      "client": "Logística Sur",
+      "status": "paused",
+      "priority": "low",
+      "startDate": "2024-12-04",
+      "endDate": "",
+      "environments": [
+        {
+          "name": "Desarrollo",
+          "url": "https://dev-plataforma-e-commerce.smartway.com"
+        },
+        {
+          "name": "QA",
+          "url": "https://qa-plataforma-e-commerce.smartway.com"
+        },
+        {
+          "name": "Producción",
+          "url": "https://plataforma-e-commerce.smartway.com"
+        }
+      ],
+      "techStack": [
+        "C#",
+        ".NET Core",
+        "SQL Server",
+        "Entity Framework"
+      ],
+      "docsUrl": "https://docs.smartway.com/plataforma-e-commerce",
+      "gitlabUrl": "https://gitlab.smartway.com/logística-sur/plataforma-e-commerce",
+      "assignedUsers": [
+        "user-1748794935165-gt6jcxwlb",
+        "user-1748794935109-cylu3yhsb"
+      ],
+      "comments": [],
+      "createdAt": "2025-04-23T18:50:40.279Z",
+      "updatedAt": "2025-01-17T04:14:00.541Z"
+    },
+    {
+      "id": "project-1748794935224-kckhk54ti",
+      "name": "Dashboard Analítico",
+      "description": "Portal interno para empleados con gestión de recursos humanos, nóminas y comunicación interna.",
+      "client": "TechStartup Inc",
+      "status": "completed",
+      "priority": "low",
+      "startDate": "2024-11-07",
+      "endDate": "2025-02-26",
+      "environments": [
+        {
+          "name": "Desarrollo",
+          "url": "https://dev-dashboard-analítico.smartway.com"
+        }
+      ],
+      "techStack": [
+        "Python",
+        "Django",
+        "PostgreSQL",
+        "Redis"
+      ],
+      "docsUrl": "https://docs.smartway.com/dashboard-analítico",
+      "gitlabUrl": "https://gitlab.smartway.com/techstartup-inc/dashboard-analítico",
+      "assignedUsers": [
+        "user-1748794935223-1j9meoc4z",
+        "user-1748794935109-cylu3yhsb",
+        "user-1748794935165-gt6jcxwlb"
+      ],
+      "comments": [
+        {
+          "id": "comment-1748794935224-f1tc21irt",
+          "userId": "user-1748794935223-1j9meoc4z",
+          "content": "Proyecto iniciado correctamente. Primeras funcionalidades implementadas.",
+          "createdAt": "2025-05-10T17:04:56.948Z"
+        }
+      ],
+      "createdAt": "2025-03-06T16:54:20.886Z",
+      "updatedAt": "2025-05-12T17:23:58.698Z"
+    },
+    {
+      "id": "project-1748794935224-q2eomcz7h",
+      "name": "Sistema de Facturación",
+      "description": "Portal educativo con gestión de cursos, estudiantes y contenido multimedia interactivo.",
+      "client": "Logística Sur",
+      "status": "paused",
+      "priority": "low",
+      "startDate": "2024-10-12",
+      "endDate": "",
+      "environments": [
+        {
+          "name": "Desarrollo",
+          "url": "https://dev-sistema-de-facturación.smartway.com"
+        },
+        {
+          "name": "QA",
+          "url": "https://qa-sistema-de-facturación.smartway.com"
+        },
+        {
+          "name": "Producción",
+          "url": "https://sistema-de-facturación.smartway.com"
         }
       ],
       "techStack": [
@@ -356,22 +295,187 @@
         "MySQL",
         "Vue.js"
       ],
-      "docsUrl": "https://docs.smartway.com/app-mobile-corporativa",
-      "gitlabUrl": "https://gitlab.smartway.com/constructora-beta/app-mobile-corporativa",
+      "docsUrl": "https://docs.smartway.com/sistema-de-facturación",
+      "gitlabUrl": "https://gitlab.smartway.com/logística-sur/sistema-de-facturación",
       "assignedUsers": [
-        "user-1748739941314-cxz11b6av",
-        "user-1748739941155-f909337ti"
+        "user-1748794935223-1j9meoc4z"
       ],
       "comments": [
         {
-          "id": "comment-1748739941380-bq5el894k",
-          "userId": "user-1748739941314-cxz11b6av",
+          "id": "comment-1748794935224-xi6ajpn3v",
+          "userId": "user-1748794935223-1j9meoc4z",
           "content": "Proyecto iniciado correctamente. Primeras funcionalidades implementadas.",
-          "createdAt": "2025-05-20T05:39:01.266Z"
+          "createdAt": "2025-01-04T09:53:06.430Z"
         }
       ],
-      "createdAt": "2024-12-07T20:35:15.657Z",
-      "updatedAt": "2025-06-01T01:47:14.367Z"
+      "createdAt": "2024-12-19T08:14:47.869Z",
+      "updatedAt": "2025-02-21T11:59:14.289Z"
+    },
+    {
+      "id": "project-1748794935224-8nmak3mgk",
+      "name": "Portal de Empleados",
+      "description": "Aplicación de salud para seguimiento de pacientes con historiales médicos y telemedicina.",
+      "client": "Retail Express",
+      "status": "active",
+      "priority": "low",
+      "startDate": "2025-03-25",
+      "endDate": "2025-03-23",
+      "environments": [
+        {
+          "name": "Desarrollo",
+          "url": "https://dev-portal-de-empleados.smartway.com"
+        },
+        {
+          "name": "QA",
+          "url": "https://qa-portal-de-empleados.smartway.com"
+        }
+      ],
+      "techStack": [
+        "Flutter",
+        "Dart",
+        "SQLite",
+        "Provider"
+      ],
+      "docsUrl": "https://docs.smartway.com/portal-de-empleados",
+      "assignedUsers": [
+        "user-1748794935040-4miguelzf"
+      ],
+      "comments": [
+        {
+          "id": "comment-1748794935224-4669360cf",
+          "userId": "user-1748794935040-4miguelzf",
+          "content": "Proyecto iniciado correctamente. Primeras funcionalidades implementadas.",
+          "createdAt": "2025-01-11T10:26:53.837Z"
+        }
+      ],
+      "createdAt": "2024-08-14T13:19:10.097Z",
+      "updatedAt": "2025-03-30T06:33:11.675Z"
+    },
+    {
+      "id": "project-1748794935224-6c71pafxc",
+      "name": "Sistema de Reservas",
+      "description": "Portal educativo con gestión de cursos, estudiantes y contenido multimedia interactivo.",
+      "client": "TechStartup Inc",
+      "status": "paused",
+      "priority": "low",
+      "startDate": "2024-11-03",
+      "endDate": "2025-02-13",
+      "environments": [
+        {
+          "name": "Desarrollo",
+          "url": "https://dev-sistema-de-reservas.smartway.com"
+        },
+        {
+          "name": "QA",
+          "url": "https://qa-sistema-de-reservas.smartway.com"
+        },
+        {
+          "name": "Producción",
+          "url": "https://sistema-de-reservas.smartway.com"
+        }
+      ],
+      "techStack": [
+        "Flutter",
+        "Dart",
+        "SQLite",
+        "Provider"
+      ],
+      "docsUrl": "https://docs.smartway.com/sistema-de-reservas",
+      "gitlabUrl": "https://gitlab.smartway.com/techstartup-inc/sistema-de-reservas",
+      "assignedUsers": [
+        "user-1748794935109-cylu3yhsb"
+      ],
+      "comments": [
+        {
+          "id": "comment-1748794935224-gqtm6ybrv",
+          "userId": "user-1748794935109-cylu3yhsb",
+          "content": "Proyecto iniciado correctamente. Primeras funcionalidades implementadas.",
+          "createdAt": "2025-04-12T05:43:27.406Z"
+        }
+      ],
+      "createdAt": "2024-09-20T14:55:30.903Z",
+      "updatedAt": "2024-12-08T07:31:05.998Z"
+    },
+    {
+      "id": "project-1748794935224-fyg9v1okk",
+      "name": "CRM Empresarial",
+      "description": "Marketplace digital con múltiples vendedores, sistema de reviews y gestión de comisiones.",
+      "client": "Food Delivery",
+      "status": "active",
+      "priority": "low",
+      "startDate": "2024-10-19",
+      "endDate": "2025-01-18",
+      "environments": [
+        {
+          "name": "Desarrollo",
+          "url": "https://dev-crm-empresarial.smartway.com"
+        },
+        {
+          "name": "QA",
+          "url": "https://qa-crm-empresarial.smartway.com"
+        }
+      ],
+      "techStack": [
+        "Flutter",
+        "Dart",
+        "SQLite",
+        "Provider"
+      ],
+      "docsUrl": "https://docs.smartway.com/crm-empresarial",
+      "gitlabUrl": "https://gitlab.smartway.com/food-delivery/crm-empresarial",
+      "assignedUsers": [
+        "user-1748794935165-gt6jcxwlb",
+        "user-1748794935040-4miguelzf",
+        "user-1748794935223-1j9meoc4z"
+      ],
+      "comments": [
+        {
+          "id": "comment-1748794935224-hwdvym164",
+          "userId": "user-1748794935165-gt6jcxwlb",
+          "content": "Proyecto iniciado correctamente. Primeras funcionalidades implementadas.",
+          "createdAt": "2025-03-14T17:24:06.856Z"
+        }
+      ],
+      "createdAt": "2024-11-04T14:51:04.482Z",
+      "updatedAt": "2025-03-14T22:07:06.385Z"
+    },
+    {
+      "id": "project-1748794935224-qx7j28luz",
+      "name": "Portal Educativo",
+      "description": "Desarrollo de una plataforma integral para la gestión de clientes con funcionalidades avanzadas de CRM y analytics.",
+      "client": "Banco Nacional",
+      "status": "completed",
+      "priority": "low",
+      "startDate": "2024-09-23",
+      "endDate": "",
+      "environments": [
+        {
+          "name": "Desarrollo",
+          "url": "https://dev-portal-educativo.smartway.com"
+        },
+        {
+          "name": "QA",
+          "url": "https://qa-portal-educativo.smartway.com"
+        },
+        {
+          "name": "Producción",
+          "url": "https://portal-educativo.smartway.com"
+        }
+      ],
+      "techStack": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS"
+      ],
+      "docsUrl": "https://docs.smartway.com/portal-educativo",
+      "gitlabUrl": "https://gitlab.smartway.com/banco-nacional/portal-educativo",
+      "assignedUsers": [
+        "admin-1"
+      ],
+      "comments": [],
+      "createdAt": "2025-01-11T21:20:36.525Z",
+      "updatedAt": "2025-03-15T05:32:17.226Z"
     }
   ]
 }
