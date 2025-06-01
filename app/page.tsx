@@ -6,8 +6,9 @@ import { NavigationTabs } from "@/components/navigation-tabs"
 import { PageTransition } from "@/components/page-transition"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
 import { ProjectCard } from "@/components/project-card"
-import { Plus, AlertCircle, Loader2 } from "lucide-react"
+import { Plus, AlertCircle, Loader2, Search } from "lucide-react"
 import { useState, useEffect } from "react"
 import { useToast } from "@/hooks/use-toast"
 import { EditProjectDialog } from "@/components/edit-project-dialog"
@@ -21,6 +22,7 @@ export default function Dashboard() {
   const [currentUser, setCurrentUser] = useState<User | null>(null)
   const [loading, setLoading] = useState(true)
   const [usersLoading, setUsersLoading] = useState(true)
+  const [searchTerm, setSearchTerm] = useState("")
   const [showAllProjects, setShowAllProjects] = useState(false)
   const [editingProject, setEditingProject] = useState<Project | null>(null)
   const [showEditDialog, setShowEditDialog] = useState(false)
@@ -122,8 +124,16 @@ export default function Dashboard() {
     setEditingProject(null)
   }
 
+  // Filtrar proyectos por búsqueda
+  const filteredProjects = projects.filter(project => {
+    const matchesSearch = project.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         project.client.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         project.description.toLowerCase().includes(searchTerm.toLowerCase())
+    return matchesSearch
+  })
+
   // Determinar cuántos proyectos mostrar
-  const projectsToShow = showAllProjects ? projects : projects.slice(0, 6)
+  const projectsToShow = showAllProjects ? filteredProjects : filteredProjects.slice(0, 6)
 
   // Solo admin puede crear, editar y eliminar
   const isAdmin = currentUser?.role === 'admin'
@@ -213,13 +223,37 @@ export default function Dashboard() {
             </Card>
           </div>
 
+          {/* Buscador de Proyectos */}
+          <div className="flex items-center gap-4">
+            <div className="relative flex-1 max-w-md">
+              <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+              <Input
+                type="search"
+                placeholder="Buscar proyectos por nombre o cliente..."
+                className="pl-8"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+            </div>
+            {searchTerm && (
+              <div className="text-sm text-muted-foreground">
+                {filteredProjects.length} de {projects.length} proyectos
+              </div>
+            )}
+          </div>
+
           {/* Projects List */}
           <div className="space-y-4">
             <div className="flex items-center justify-between">
               <h2 className="text-xl font-semibold">
-                {showAllProjects ? 'Todos los Proyectos' : 'Proyectos Recientes'}
+                {searchTerm 
+                  ? `Resultados de búsqueda (${filteredProjects.length})`
+                  : showAllProjects 
+                    ? 'Todos los Proyectos' 
+                    : 'Proyectos Recientes'
+                }
               </h2>
-              {projects.length > 6 && (
+              {!searchTerm && filteredProjects.length > 6 && (
                 <Button 
                   variant="outline" 
                   size="sm"
@@ -230,24 +264,39 @@ export default function Dashboard() {
               )}
             </div>
             
-            {projects.length === 0 ? (
+            {projectsToShow.length === 0 ? (
               <Card>
                 <CardContent className="text-center py-8">
-                  <AlertCircle className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-                  <h3 className="text-lg font-medium mb-2">No hay proyectos</h3>
-                  <p className="text-muted-foreground mb-4">
-                    {isAdmin 
-                      ? 'Comienza creando tu primer proyecto'
-                      : 'No tienes proyectos asignados aún'
-                    }
-                  </p>
-                  {isAdmin && (
-                    <Link href="/add-project">
-                      <Button>
-                        <Plus className="h-4 w-4 mr-2" />
-                        Crear Proyecto
+                  {searchTerm ? (
+                    <>
+                      <Search className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
+                      <h3 className="text-lg font-medium mb-2">No se encontraron proyectos</h3>
+                      <p className="text-muted-foreground mb-4">
+                        No hay proyectos que coincidan con "{searchTerm}"
+                      </p>
+                      <Button variant="outline" onClick={() => setSearchTerm("")}>
+                        Limpiar búsqueda
                       </Button>
-                    </Link>
+                    </>
+                  ) : (
+                    <>
+                      <AlertCircle className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
+                      <h3 className="text-lg font-medium mb-2">No hay proyectos</h3>
+                      <p className="text-muted-foreground mb-4">
+                        {isAdmin 
+                          ? 'Comienza creando tu primer proyecto'
+                          : 'No tienes proyectos asignados aún'
+                        }
+                      </p>
+                      {isAdmin && (
+                        <Link href="/add-project">
+                          <Button>
+                            <Plus className="h-4 w-4 mr-2" />
+                            Crear Proyecto
+                          </Button>
+                        </Link>
+                      )}
+                    </>
                   )}
                 </CardContent>
               </Card>

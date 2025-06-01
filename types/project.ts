@@ -17,7 +17,7 @@ export type Project = {
   client: string
   environments: Environment[]
   techStack: string[]
-  status: string
+  status: 'active' | 'maintenance' | 'completed' | 'paused' | 'archived'
   docsUrl?: string
   gitlabUrl?: string
   comments?: Comment[]

@@ -181,7 +181,7 @@
       "name": "App de Monitoreo",
       "description": "Aplicación de salud para seguimiento de pacientes con historiales médicos y telemedicina.",
       "client": "Constructora Beta",
-      "status": "completed",
+      "status": "archived",
       "priority": "low",
       "startDate": "2025-03-25",
       "endDate": "",
@@ -219,7 +219,7 @@
         }
       ],
       "createdAt": "2025-01-19T13:43:17.895Z",
-      "updatedAt": "2025-06-01T01:47:13.986Z"
+      "updatedAt": "2025-06-01T03:47:36.517Z"
     },
     {
       "id": "project-1748739941380-ycjyr96qb",

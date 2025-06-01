@@ -13,6 +13,7 @@ import { useState, useEffect } from "react"
 import { Plus, Trash2 } from "lucide-react"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { toast } from "sonner"
+import { Project } from "@/types/project"
 
 const formSchema = z.object({
   name: z.string().min(2, "El nombre debe tener al menos 2 caracteres"),
@@ -21,24 +22,8 @@ const formSchema = z.object({
   techStack: z.string().min(2, "Las tecnologías son requeridas"),
   docsUrl: z.string().url("URL inválida").optional().or(z.literal("")),
   gitlabUrl: z.string().url("URL inválida").optional().or(z.literal("")),
-  status: z.enum(['active', 'maintenance', 'completed', 'paused']),
+  status: z.enum(['active', 'maintenance', 'completed', 'paused', 'archived']),
 })
-
-interface Project {
-  id: string;
-  name: string;
-  description: string;
-  client: string;
-  environments: { name: string; url: string }[];
-  techStack: string[];
-  status: 'active' | 'maintenance' | 'completed' | 'paused';
-  docsUrl?: string;
-  gitlabUrl?: string;
-  comments: { id: string; text: string; author: string; date: string }[];
-  assignedUsers: string[];
-  createdAt: string;
-  updatedAt: string;
-}
 
 interface EditProjectDialogProps {
   isOpen: boolean;
@@ -351,6 +336,7 @@ export function EditProjectDialog({ isOpen, onClose, project, onSuccess }: EditP
                             <SelectItem value="maintenance">Mantenimiento</SelectItem>
                             <SelectItem value="completed">Completado</SelectItem>
                             <SelectItem value="paused">Pausado</SelectItem>
+                            <SelectItem value="archived">Archivado</SelectItem>
                           </SelectContent>
                         </Select>
                         <FormMessage />

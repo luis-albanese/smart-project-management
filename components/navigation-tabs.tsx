@@ -39,11 +39,25 @@ export function NavigationTabs() {
 
   if (loading) {
     return (
-      <div className="border-b">
+      <div className="border-b bg-background">
         <nav className="container mx-auto">
           <div className="flex space-x-8">
-            <div className="h-10 w-20 bg-gray-200 animate-pulse rounded"></div>
-            <div className="h-10 w-20 bg-gray-200 animate-pulse rounded"></div>
+            {/* Skeleton para Dashboard (siempre visible) */}
+            <div className="flex items-center gap-2 px-1 py-4">
+              <div className="h-4 w-4 bg-muted animate-pulse rounded"></div>
+              <div className="h-4 w-20 bg-muted animate-pulse rounded"></div>
+            </div>
+            
+            {/* Skeletons adicionales para otras tabs */}
+            <div className="flex items-center gap-2 px-1 py-4">
+              <div className="h-4 w-4 bg-muted animate-pulse rounded"></div>
+              <div className="h-4 w-24 bg-muted animate-pulse rounded"></div>
+            </div>
+            
+            <div className="flex items-center gap-2 px-1 py-4">
+              <div className="h-4 w-4 bg-muted animate-pulse rounded"></div>
+              <div className="h-4 w-20 bg-muted animate-pulse rounded"></div>
+            </div>
           </div>
         </nav>
       </div>
@@ -57,7 +71,7 @@ export function NavigationTabs() {
   })
 
   return (
-    <div className="border-b">
+    <div className="border-b bg-background">
       <nav className="container mx-auto">
         <div className="flex space-x-8">
           {allowedTabs.map((tab) => {

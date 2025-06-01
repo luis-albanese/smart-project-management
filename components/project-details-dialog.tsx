@@ -21,7 +21,6 @@ import {
   Tag,
   Building,
   Info,
-  MessageSquare
 } from "lucide-react"
 import { format } from "date-fns"
 import { es } from "date-fns/locale"
@@ -85,10 +84,11 @@ export function ProjectDetailsDialog({
 
   const getAssignedUserNames = () => {
     if (!project.assignedUsers || !users.length) return []
-    return project.assignedUsers
-      .map(userId => users.find(user => user.id === userId))
-      .filter(Boolean)
-      .map(user => user?.name)
+    
+    return project.assignedUsers.map(userId => {
+      const user = users.find(u => u.id === userId)
+      return user ? user.name : `Usuario ${userId}`
+    })
   }
 
   const formatDate = (dateString?: string) => {
@@ -288,37 +288,6 @@ export function ProjectDetailsDialog({
                   ))
                 ) : (
                   <p className="text-muted-foreground">No hay usuarios asignados</p>
-                )}
-              </div>
-            </div>
-
-            <Separator />
-
-            {/* Comentarios */}
-            <div className="space-y-4">
-              <div className="flex items-center gap-2">
-                <MessageSquare className="h-4 w-4" />
-                <h3 className="text-lg font-semibold">Comentarios</h3>
-                {project.comments && project.comments.length > 0 && (
-                  <Badge variant="secondary" className="text-xs">
-                    {project.comments.length}
-                  </Badge>
-                )}
-              </div>
-              
-              <div className="space-y-3">
-                {project.comments && project.comments.length > 0 ? (
-                  project.comments.map((comment) => (
-                    <div key={comment.id} className="p-3 border rounded-lg space-y-2">
-                      <div className="flex justify-between items-start">
-                        <p className="font-medium">{comment.author}</p>
-                        <p className="text-xs text-muted-foreground">{comment.date}</p>
-                      </div>
-                      <p className="text-sm">{comment.text}</p>
-                    </div>
-                  ))
-                ) : (
-                  <p className="text-muted-foreground">No hay comentarios</p>
                 )}
               </div>
             </div>
