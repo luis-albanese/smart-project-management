@@ -12,17 +12,23 @@ RUN npm install -g pnpm
 # Copy package files
 COPY package.json pnpm-lock.yaml* ./
 
-# Install dependencies with pnpm
+# Install production dependencies
 RUN pnpm install --frozen-lockfile --prod
 
-# Rebuild the source code only when needed
+# Install all dependencies (including dev) for build stage
 FROM base AS builder
 WORKDIR /app
 
 # Install pnpm globally
 RUN npm install -g pnpm
 
-COPY --from=deps /app/node_modules ./node_modules
+# Copy package files
+COPY package.json pnpm-lock.yaml* ./
+
+# Install ALL dependencies (including devDependencies for build)
+RUN pnpm install --frozen-lockfile
+
+# Copy source code
 COPY . .
 
 # Disable telemetry during the build
@@ -38,9 +44,6 @@ WORKDIR /app
 ENV NODE_ENV production
 ENV NEXT_TELEMETRY_DISABLED 1
 
-# Install pnpm globally
-RUN npm install -g pnpm
-
 # Create a non-root user
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
@@ -50,7 +53,9 @@ COPY --from=builder /app/public ./public
 
 # Copy the built application
 COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
-COPY --from=builder /app/node_modules ./node_modules
+
+# Copy production dependencies from deps stage
+COPY --from=deps /app/node_modules ./node_modules
 COPY --from=builder /app/package.json ./package.json
 
 # Create data directory for database
